@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RX5-MP-Qsc">
+                                <rect key="frame" x="0.0" y="81" width="414" height="691"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="691" id="M4I-VC-Hn3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34Z-TG-fja">
+                                <rect key="frame" x="56" y="796" width="30" height="53"/>
+                                <state key="normal" title="이전"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Sh-A9-SiU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihQ-LE-THY">
+                                <rect key="frame" x="328" y="796" width="30" height="53"/>
+                                <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="btnForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7H-fj-M7P"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Viewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQn-4M-6ra">
+                                <rect key="frame" x="120" y="44" width="174" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RX5-MP-Qsc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0fv-lz-pwC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rQn-4M-6ra" secondAttribute="trailing" constant="120" id="592-7h-tqe"/>
+                            <constraint firstItem="rQn-4M-6ra" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="5fY-KX-bdR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="34Z-TG-fja" secondAttribute="bottom" constant="13" id="SoR-Ts-rDJ"/>
+                            <constraint firstItem="rQn-4M-6ra" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="THN-SY-bpn"/>
+                            <constraint firstItem="RX5-MP-Qsc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wtx-8x-RXQ"/>
+                            <constraint firstItem="RX5-MP-Qsc" firstAttribute="top" secondItem="rQn-4M-6ra" secondAttribute="bottom" constant="16" id="bOI-iS-qsd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ihQ-LE-THY" secondAttribute="trailing" constant="56" id="bQv-sm-WC9"/>
+                            <constraint firstItem="34Z-TG-fja" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="cEC-wO-bNc"/>
+                            <constraint firstItem="34Z-TG-fja" firstAttribute="top" secondItem="RX5-MP-Qsc" secondAttribute="bottom" constant="24" id="jBX-4m-AJ0"/>
+                            <constraint firstItem="rQn-4M-6ra" firstAttribute="centerX" secondItem="RX5-MP-Qsc" secondAttribute="centerX" id="mDU-GB-y7f"/>
+                            <constraint firstItem="ihQ-LE-THY" firstAttribute="top" secondItem="RX5-MP-Qsc" secondAttribute="bottom" constant="24" id="n6i-Br-JPW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ihQ-LE-THY" secondAttribute="bottom" constant="13" id="ptc-tD-hGr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="RX5-MP-Qsc" id="aE8-an-Xb1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
